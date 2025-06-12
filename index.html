@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bypass Attendance & Exam Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="container" role="main" aria-label="Bypass Attendance and Exam Portal Access">
+    <div class="glow-title" aria-live="polite">Bypass Attendance &amp; Exam Portal</div>
+
+    <label for="inputText" class="sr-only">Registration Number</label>
+    <textarea
+      id="inputText"
+      rows="2"
+      placeholder="Enter Registration Number..."
+      aria-describedby="inputHelp"
+      aria-required="true"
+      spellcheck="false"
+      autocomplete="off"
+    ></textarea>
+
+    <div id="progressBarContainer" aria-hidden="true">
+      <div id="progressBar"></div>
+    </div>
+
+    <div class="buttons">
+      <button type="button" onclick="generateURL('attendance')" aria-label="Get Attendance">🚀 Get Attendance</button>
+      <button type="button" onclick="generateURL('exam')" aria-label="Check Result">📊 Check Result</button>
+    </div>
+
+    <button id="darkModeToggle" type="button" aria-pressed="false" aria-label="Toggle Light Mode">
+      Toggle Light Mode 🌗
+    </button>
+  </div>
+
+  <div id="accessPopup" role="alert" aria-live="assertive" aria-atomic="true">
+    Access Granted ✅
+  </div>
+
+  <!-- Sounds -->
+  <audio id="clickSound" src="https://actions.google.com/sounds/v1/ui/click.ogg" preload="auto"></audio>
+  <audio id="popupSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
